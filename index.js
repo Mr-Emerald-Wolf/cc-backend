@@ -10,6 +10,7 @@ var corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
 // parse requests of content-type - application/json
 app.use(bodyParser.json())
 app.use(
@@ -28,8 +29,8 @@ db.sequelize.sync()
         console.log("Failed to sync db: " + err.message);
     });
 
-const users = require("./routes/user");
-app.use('/users',users)
+const routes = require("./routes/index");
+app.use('/',routes)
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
