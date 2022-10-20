@@ -2,11 +2,13 @@ const express = require('express')
 require('dotenv').config()
 const cors = require('cors')
 const bodyParser = require('body-parser')
+const cookieParser = require("cookie-parser");
+
 
 const app = express()
-
+app.use(cookieParser());
 var corsOptions = {
-    origin: "http://localhost:3001"
+    origin: "http://localhost:3002"
 };
 
 app.use(cors(corsOptions));

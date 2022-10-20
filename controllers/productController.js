@@ -35,7 +35,8 @@ exports.createProduct = async(req,res) => {
 
 exports.findProduct = async(req,res) => {
     try{
-        const id = req.query.id
+        const email = req.email
+        console.log(email);
         const findproduct = await products.findOne({where:{id:id}})
         if(findproduct){
             res.send({
