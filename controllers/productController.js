@@ -94,10 +94,10 @@ exports.updateProduct = async(req,res) => {
 
 exports.deleteProduct = async(req,res) => {
     try{
-        const id = req.query.id
-        const findproduct = await products.findOne({where:{id:id}})
+        const productName = req.query.productName
+        const findproduct = await products.findOne({where:{productName:productName}})
         if(findproduct){
-            const data = await products.destroy({where:{id:id}})
+            const data = await products.destroy({where:{productName:productName}})
             if(data){
                 res.send({
                     status: true,

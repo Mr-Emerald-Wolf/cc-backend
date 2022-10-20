@@ -151,22 +151,7 @@ exports.loginUser = async (req, res) => {
         const email = user[0].email;
         const role = user[0].role;
         const accessToken = jwt.sign({ userId, name, role, email }, process.env.ACCESS_TOKEN_SECRET);
-        const refreshToken = jwt.sign({ userId, name, role, email }, process.env.REFRESH_TOKEN_SECRET, {
-            expiresIn: '1d'
-        });
-        await User.update({ refresh_token: refreshToken }, {
-            where: {
-                id: userId
-            }
-        });
-        res.cookie('accessToken', accessToken, {
-            httpOnly: true,
-            maxAge: 24 * 60 * 60 * 1000
-        });
-        res.cookie('refreshToken', refreshToken, {
-            httpOnly: true,
-            maxAge: 24 * 60 * 60 * 1000
-        });
+
         res.json({ accessToken });
     } catch (error) {
         console.log(error);
