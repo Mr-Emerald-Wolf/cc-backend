@@ -17,7 +17,7 @@
 
 > Users and Products Table Created Using Sequelize CLI 
 
-## Available Routes for Users 
+## Available Routes for Products 
 
 * /users/createUser to create new users
 * /users/getUser to fetch all users 
