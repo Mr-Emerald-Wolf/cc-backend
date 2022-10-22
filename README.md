@@ -17,7 +17,7 @@
 
 > Users and Products Table Created Using Sequelize CLI 
 
-## Available Routes for Products 
+## Available Routes for Users 
 
 * /users/createUser to create new users
 * /users/getUser to fetch all users 
@@ -26,7 +26,7 @@
 * /users/deleteUser to delete a user
 * /users/login to login using JWT a user 
 
-## Available Routes for Users 
+## Available Routes for Products 
 
 * /product/createProduct to create a new product
 * /product/getProduct to fetch all products 
