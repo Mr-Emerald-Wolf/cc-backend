@@ -60,6 +60,14 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     },
+    {
+      productName: "SHEAFFER 300",
+      productDesc: "SHEAFFER 300 Chrome With Gold Tone Rollerball Pen In Luxury Gift Box ",
+      imgUrl: "https://m.media-amazon.com/images/I/719n9urr+zL._SL1500_.jpg",
+      productPrice: 2599,
+      createdAt: new Date(),
+      updatedAt: new Date()
+  }
   ], {});
   },
 
